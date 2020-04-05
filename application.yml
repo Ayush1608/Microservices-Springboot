@@ -6,9 +6,4 @@ sample:
   name: ayush
   age: 24
 
-management.endpoints.web.exposure.include: "*"
-
-spring:
-  profiles:
-    active: test
 
