@@ -1,0 +1,19 @@
+message: hello
+list.messages: one,two,three
+map.messages: "{first:'One', second:'Two'}"
+
+#sample:
+#  name: aruna
+#  age: 48
+
+management.endpoints.web.exposure.include: "*"
+
+spring:
+#  profiles:
+#    active: test
+  cloud:
+    config:
+      uri: http://localhost:8888
+
+
+# We can also use @Profile("profile_name") above a bean class if we want to give different implementations for different profiles.
