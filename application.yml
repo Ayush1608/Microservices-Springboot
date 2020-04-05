@@ -1,0 +1,14 @@
+message: hello
+list.messages: one,two,three
+map.messages: "{first:'One', second:'Two'}"
+
+sample:
+  name: ayush
+  age: 24
+
+management.endpoints.web.exposure.include: "*"
+
+spring:
+  profiles:
+    active: test
+
