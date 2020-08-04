@@ -26,6 +26,7 @@ public class GreetingController {
   @Autowired
   private Environment environment;
 
+  // @Value ensures type safety at application startup and not at runtime of property being fetched.
   @Value("${message: default value}")
   private String message;
 

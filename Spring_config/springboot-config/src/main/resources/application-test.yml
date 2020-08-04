@@ -1,4 +1,4 @@
-message: hello
+message: hello world test
 list.messages: one,two,three
 map.messages: "{first:'One', second:'Two'}"
 

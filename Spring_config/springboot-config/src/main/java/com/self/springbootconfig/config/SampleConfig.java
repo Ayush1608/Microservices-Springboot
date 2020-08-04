@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 
 
 @Configuration
-@ConfigurationProperties("sample")
+@ConfigurationProperties("sample") //sample is prefix to look for properties in application.properties
 @Getter
 @Setter
 public class SampleConfig {
