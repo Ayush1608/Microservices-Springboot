@@ -1,6 +1,7 @@
 package com.self.currencyconversionservice;
 
 
+import brave.sampler.Sampler;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -21,5 +22,10 @@ public class CurrencyConversionServiceApplication {
   @Bean
   public RestTemplate getRestTmplate() {
     return new RestTemplate();
+  }
+
+  @Bean
+  public Sampler defaultSampler() {
+    return Sampler.ALWAYS_SAMPLE;
   }
 }
