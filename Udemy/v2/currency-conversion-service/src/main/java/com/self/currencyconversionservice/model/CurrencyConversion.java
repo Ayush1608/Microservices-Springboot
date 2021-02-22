@@ -1,4 +1,4 @@
-package com.self.currencyconversionservice.controller.model;
+package com.self.currencyconversionservice.model;
 
 
 import java.math.BigDecimal;
@@ -12,9 +12,6 @@ import lombok.Setter;
 
 @Getter
 @Setter
-@AllArgsConstructor
-@NoArgsConstructor
-@Builder
 public class CurrencyConversion {
 
   private Long id;
@@ -23,6 +20,6 @@ public class CurrencyConversion {
   private BigDecimal conversionMultiple;
   private BigDecimal quantity;
   private BigDecimal totalCalculatedAmount;
-  private String enviromnent;
+  private String environment;
 
 }
