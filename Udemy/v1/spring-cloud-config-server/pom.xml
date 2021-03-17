@@ -31,11 +31,11 @@
             <scope>runtime</scope>
             <optional>true</optional>
         </dependency>
-        <!--At startup all MS instances registers with the bus. When there is any change in configurations. When request is called on any of the
-        instances, the MS instance will send an event over to this spring cloud bus. And this spring cloud bus would propogate that event to all MS
-         instances that are registered in it. That's how all instances upgrade its configuration from spring cloud config server. This below
+        <!--At startup all MS instances registers with the bus. When there is any change in configurations. When refresh request is called on any
+        of the instances, the MS instance will send an event over to this spring cloud bus. And this spring cloud bus would propagate that event to
+         all MS instances that are registered in it. That's how all instances upgrade its configuration from spring cloud config server. This below
          dependency will know if RabbitMQ is running the background, it will automatically configure a connection to it.
-         URL: /actuator/bus-refresh             -->
+         URL: <ip>:<port>/actuator/bus-refresh             -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-bus-amqp</artifactId>
