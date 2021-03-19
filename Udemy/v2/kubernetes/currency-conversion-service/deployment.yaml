@@ -26,9 +26,12 @@ spec:
       - image: ayush1608/currency-conversion-service:0.0.12-SNAPSHOT
         imagePullPolicy: IfNotPresent
         name: currency-conversion-service
-        env:
-          - name: CURRENCY_EXCHANGE_SERVICE_URI
-            value: http://currency-exchange-service # The value should match service name created on k8s cluster
+        envFrom:
+          - configMapRef:
+              name: currency-conversion-service
+#        env:
+#          - name: CURRENCY_EXCHANGE_SERVICE_URI
+#            value: http://currency-exchange-service # The value should match service name created on k8s cluster
       restartPolicy: Always
 ---
 apiVersion: v1
@@ -47,3 +50,12 @@ spec:
     app: currency-conversion-service
   sessionAffinity: None
   type: LoadBalancer
+
+---
+apiVersion: v1
+data:
+  CURRENCY_EXCHANGE_SERVICE_URI: http://currency-exchange-service
+kind: ConfigMap
+metadata:
+  name: currency-conversion-service
+  namespace: default
