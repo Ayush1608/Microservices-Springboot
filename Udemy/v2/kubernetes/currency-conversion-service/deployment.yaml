@@ -23,9 +23,12 @@ spec:
         app: currency-conversion-service
     spec:
       containers:
-      - image: ayush1608/currency-conversion-service:0.0.11-SNAPSHOT
+      - image: ayush1608/currency-conversion-service:0.0.12-SNAPSHOT
         imagePullPolicy: IfNotPresent
         name: currency-conversion-service
+        env:
+          - name: CURRENCY_EXCHANGE_SERVICE_URI
+            value: http://currency-exchange-service # The value should match service name created on k8s cluster
       restartPolicy: Always
 ---
 apiVersion: v1

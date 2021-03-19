@@ -23,7 +23,7 @@ spec:
         app: currency-exchange-service
     spec:
       containers:
-      - image: ayush1608/currency-exchange-service:0.0.11-SNAPSHOT
+      - image: ayush1608/currency-exchange-service:0.0.12-SNAPSHOT
         imagePullPolicy: IfNotPresent
         name: currency-exchange-service
       restartPolicy: Always

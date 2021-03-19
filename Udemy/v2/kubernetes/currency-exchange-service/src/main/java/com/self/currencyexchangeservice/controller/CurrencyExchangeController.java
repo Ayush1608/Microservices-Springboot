@@ -35,7 +35,7 @@ public class CurrencyExchangeController {
     //CHANGE-KUBERNETES
     String port = environment.getProperty("local.server.port");
     String host = environment.getProperty("HOSTNAME"); // will provide info about pod where specific container is running.
-    String version = "v11";
+    String version = "v12";
 
     currencyExchange.setEnvironment(port + " " + version + " " + host);
 
