@@ -14,7 +14,7 @@ https://hub.docker.com/u/ayush1608
 -> ayush1608/naming-server:0.0.1-SNAPSHOT
 
 **API GATEWAY**
--> in28min/api-gateway:0.0.1-SNAPSHOT
+-> ayush1608/api-gateway:0.0.1-SNAPSHOT
 
 **URLS**
 
@@ -38,7 +38,7 @@ http://localhost:8765/currency-conversion/from/USD/to/INR/quantity/10
 
 docker run -p 9411:9411 openzipkin/zipkin:2.23
 
-docker push docker.io/in28min/mmv2-currency-exchange-service:0.0.1-SNAPSHOT
+docker push docker.io/ayush1608/currency-exchange-service:0.0.1-SNAPSHOT
 
 docker-compose --version
 
